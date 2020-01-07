@@ -1,0 +1,54 @@
+<br>
+<br>
+<div class="card-header bg-primary text-white">
+    <span>Lista de Doctores</span>
+</div>
+<div class="container py-4">
+
+    <div class="card bg-light">
+        <div class="card-header bg-primary text-white">Lista de Doctores</div>
+        <div class="card-body">
+
+            <h4 class="card-title">
+                <button class="btn btn-primary btn-sm " (click)='create()'>Agregar Doctor</button>
+            </h4>
+            <table class="table table-bordered table-striped my-4 ">
+                <thead class="thead-info bg-info text-white ">
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>APELLIDO</th>
+                        <th>DNI</th>
+                        <th>CMP</th>
+                        <th> VER</th>
+                        <th>EDITAR</th>
+                        <th>ELIMINAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let doctor of doctors">
+                        <td>
+                            <a class="btn btn-primary btn-xs text-white ">{{doctor.id}}</a>
+                        </td>
+
+                        <td>{{doctor.firstName}}</td>
+                        <td> {{doctor.lastName}}</td>
+                        <td>{{doctor.dni}}</td>
+                        <td>{{doctor.cmp}}</td>
+                        <td>
+                            <button class="btn btn-success btn-sm " (click)='view(doctor)'>ver</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-warning btn-sm " (click)='edit(doctor)'>editar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-sm " (click)='delete(doctor)'>eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>

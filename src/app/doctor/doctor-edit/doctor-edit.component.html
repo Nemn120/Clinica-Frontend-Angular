@@ -1,0 +1,42 @@
+<br>
+<br><br>
+<div class="container py-4">
+    <div class="card bg-light ">
+        <div class="card-header bg-primary text-white">Editar Doctor</div>
+        <div class="card-body">
+            <form action="">
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Nombre</label>
+                    <div class="col-sm-6">
+                        <input type="text" [(ngModel)]="doctor.firstName" name="firstName" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">Apellido</label>
+                    <div class="col-sm-6">
+                        <input type="text" [(ngModel)]="doctor.lastName" name="lastName" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">DNI</label>
+                    <div class="col-sm-6">
+                        <input type="text" [(ngModel)]="doctor.dni" name="dni" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label class="col-sm-2 col-form-label">CMP</label>
+                    <div class="col-sm-6">
+                        <input type="text" [(ngModel)]="doctor.cmp" name="numberClinicalHistory" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-6">
+                        <button class="btn btn-warning btn-sm" (click)="actualizar(doctor)">Actualizar</button>
+                    </div>
+                </div>
+
+            </form>
+            <button class="btn btn-info btn-sm" (click)="regresarDoctors()">Regresar</button>
+        </div>
+    </div>
+</div>

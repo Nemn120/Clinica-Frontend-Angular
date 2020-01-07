@@ -1,0 +1,55 @@
+<br>
+<br>
+<div class="card-header bg-primary text-white">
+    <span>Lista de Pacientes</span>
+</div>
+<div class="container py-4">
+
+    <div class="card bg-light">
+        <div class="card-header bg-primary text-white">Lista de Pacientes</div>
+        <div class="card-body">
+
+            <h4 class="card-title">
+                <button class="btn btn-primary btn-sm " (click)='create()'>Agregar Paciente</button>
+            </h4>
+            <table class="table table-bordered table-striped my-4 ">
+                <thead class="thead-info bg-info text-white ">
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+                        <th>APELLIDO</th>
+                        <th>DNI</th>
+                        <th>HistoriaClinica</th>
+
+                        <th> VER</th>
+                        <th>EDITAR</th>
+                        <th>ELIMINAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let patient of patients">
+                        <td>
+                            <a class="btn btn-primary btn-xs text-white ">{{patient.id}}</a>
+                        </td>
+
+                        <td>{{patient.firstName}}</td>
+                        <td> {{patient.lastName}}</td>
+                        <td>{{patient.dni}}</td>
+                        <td>{{patient.numberClinicalHistory}}</td>
+                        <td>
+                            <button class="btn btn-success btn-sm " (click)='view(patient)'>ver</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-warning btn-sm " (click)='edit(patient)'>editar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-sm " (click)='delete(patient)'>eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="container py-4">
+    <br><br><br>
+    <div class="card bg-light">
+        <div class="card-header bg-info text-white">Ver Paciente</div>
+        <div class="card-body">
+            <ul class="list-group">
+                <li class="list-group-item active">Nombre: {{patient.firstName}}</li>
+                <li class="list-group-item">Apellido: {{patient.lastName}}</li>
+                <li class="list-group-item">DNI: {{patient.dni}}</li>
+                <li class="list-group-item">Historia Clinica: {{patient.numberClinicalHistory}}</li>
+            </ul>
+        </div>
+        <button class="btn btn-info btn-sm" (click)="regresarPatients()">Regresar</button>
+
+    </div>
+
+
+</div>

@@ -1,0 +1,49 @@
+<br>
+<br>
+<div class="card-header bg-primary text-white">
+    <span>Lista de Especialidades</span>
+</div>
+<div class="container py-4">
+
+    <div class="card bg-light">
+        <div class="card-header bg-primary text-white">Lista de Especialidades</div>
+        <div class="card-body">
+
+            <h4 class="card-title">
+                <button class="btn btn-primary btn-sm " (click)='create()'>Agregar Especialidad</button>
+            </h4>
+            <table class="table table-bordered table-striped my-4 ">
+                <thead class="thead-info bg-info text-white ">
+                    <tr>
+                        <th>ID</th>
+                        <th>NOMBRE</th>
+
+                        <th> VER</th>
+                        <th>EDITAR</th>
+                        <th>ELIMINAR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let specialty of specialtys">
+                        <td>
+                            <a class="btn btn-primary btn-xs text-white ">{{specialty.id}}</a>
+                        </td>
+                        <td>{{specialty.nombre}}</td>
+
+                        <td>
+                            <button class="btn btn-success btn-sm " (click)='view(specialty)'>ver</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-warning btn-sm " (click)='edit(specialty)'>editar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger btn-sm " (click)='delete(specialty)'>eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+
+            </table>
+
+        </div>
+    </div>
+</div>
